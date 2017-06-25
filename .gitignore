@@ -7,3 +7,6 @@
 *.rel
 *.rst
 *.sym
+.idea
+CMakeLists.txt
+cmake-build-debug

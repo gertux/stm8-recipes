@@ -1,7 +1,8 @@
 SDCC=sdcc-sdcc
 SDLD=sdcc-sdld
 BLINKY=blinky
-OBJECTS=$(BLINKY).ihx
+BLINKY_TIMER=blinky-timer
+OBJECTS=$(BLINKY).ihx $(BLINKY_TIMER).ihx
 FAC_DEF=factory_defaults.bin
 MODEL=stm8s103f3
 PROGRAMMER=stlinkv2
@@ -13,7 +14,7 @@ all: $(OBJECTS)
 clean:
 	rm -f *.asm *.cdb *.ihx *.lk *.lst *.map *.rel *.rst *.sym $(FAC_DEF)
 
-flash: $(BLINKY).ihx
+%.flash: %.ihx
 	stm8flash -c $(PROGRAMMER) -p $(MODEL) -w $<
 
 reset: $(FAC_DEF)
