@@ -5,8 +5,8 @@
  *  timer 2 is used to generate the PWM signal
  */
 #include "stm8s103xx.h"
-#define DUTYMAX 0xAF
-volatile unsigned int dutyh;
+#define DUTYMAX 0xFA
+volatile unsigned char dutyh;
 volatile unsigned char dir;
 
 void setup(void) {
