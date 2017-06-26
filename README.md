@@ -26,3 +26,4 @@ Examples
 * blinky : the 'Hello world' of embedded using a busy loop (not a very good idea, but it doesn't get any simpler)
 * blinky-timer : a more sensible blinking LED implementation using a timer
 * serial : write every second a message to the UART
+* pwm : output a varying PWM signal

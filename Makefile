@@ -1,6 +1,6 @@
 SDCC=sdcc-sdcc
 SDLD=sdcc-sdld
-OBJECTS=blinky.ihx blinky-timer.ihx serial.ihx
+OBJECTS=blinky.ihx blinky-timer.ihx serial.ihx pwm.ihx
 FAC_DEF=factory_defaults.bin
 MODEL=stm8s103f3
 PROGRAMMER=stlinkv2
