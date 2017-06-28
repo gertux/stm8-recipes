@@ -41,6 +41,15 @@
 #define TIM2_ARRL *(unsigned char*)0x5310 // Timer 2 auto-reload register low
 #define TIM2_CCR1H *(unsigned char*)0x5311 // Timer 2 capture/compare register 1 high
 #define TIM2_CCR1L *(unsigned char*)0x5312 // Timer 2 capture/compare register 1 low
+#define ADC_CSR *(unsigned char*)0x5400 // ADC control/status register
+#define ADC_CR1 *(unsigned char*)0x5401 // ADC configuration register 1
+#define ADC_CR2 *(unsigned char*)0x5402 // ADC configuration register 2
+#define ADC_DRH *(unsigned char*)0x5404 // ADC data register high
+#define ADC_DRL *(unsigned char*)0x5405 // ADC data register low
+#define ADC_HTRH *(unsigned char*)0x5408 // ADC high threshold register high
+#define ADC_HTRL *(unsigned char*)0x5409 // ADC high threshold register low
+#define ADC_LTRH *(unsigned char*)0x540A // ADC low threshold register high
+#define ADC_LTRL *(unsigned char*)0x540B // ADC low threshold register low
 
 #define TIMX_SR1_UIF 0x01
 #define TIMX_CCER_CC1E 0x01
@@ -53,9 +62,13 @@
 #define UART_CR3_STOP1 0x10
 #define UART_CR3_STOP2 0x20
 #define UART_SR_TXE 0x80
+#define ADC_CSR_EOC 0x80
+#define ADC_CSR_AWD 0x40
+#define ADC_CSR_EOCIE 0x20
+#define ADC_CSR_AWDIE 0x10
+#define ADC_CR1_CONT 0x02
+#define ADC_CR1_ADON 0x01
+#define ADC_CR2_ALIGN_R 0x08
 
-#define __wait_for_interrupt() { __asm__("wfi\n"); }
-#define __enable_interrupts() { __asm__("rim"); }
-#define __disable_interrupts() { __asm__("sim"); }
 
 #endif //STM8_STM8S103XX_H_H

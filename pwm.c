@@ -4,7 +4,7 @@
  *  timer 1 is used to variate the PWM duty cycle setting
  *  timer 2 is used to generate the PWM signal
  */
-#include "stm8s103xx.h"
+#include "common.h"
 #define DUTYMAX 0xFA
 volatile unsigned char dutyh;
 volatile unsigned char dir;

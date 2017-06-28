@@ -4,7 +4,7 @@
  *
  */
 #include <stdio.h>
-#include "stm8s103xx.h"
+#include "common.h"
 volatile unsigned int count;
 void setup(void) {
     count = 0;
@@ -28,7 +28,7 @@ void putchar(unsigned char c) {
 void tim2_isr(void) __interrupt(13) {
     if(TIM2_SR1 & TIMX_SR1_UIF) {
         TIM2_SR1 &= ~TIMX_SR1_UIF;
-        printf("%d times interrupted\n", ++count);
+        printf("%u times interrupted\n", ++count);
     }
 }
 

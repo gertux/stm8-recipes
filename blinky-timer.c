@@ -4,7 +4,7 @@
  *   We want a 1Hz signal with 50% duty for LED B5 and 50% duty for LED D4
  *
  **/
-#include "stm8s103xx.h"
+#include "common.h"
 
 void setup(void) {
     CLK_CKDIVR = 0x00; // 16MHz

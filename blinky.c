@@ -4,7 +4,7 @@
  *   We are looking for a 1Hz signal with 50% duty for LED B5 and 50% duty for LED D4
  *
  **/
-#include "stm8s103xx.h"
+#include "common.h"
 
 #define WAITS 15625/25 // about 0.5s wait for 15625Hz
 
