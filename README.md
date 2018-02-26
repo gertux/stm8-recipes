@@ -11,6 +11,8 @@ Requirements
 
 These recipes work out-of-the box with what I think is the cheapest STM8 board available, the STM8S103F3P6 boards that
 can be bought via the well known cheap channels for about € 0,60.
+
+![STM8S103F3P6 board](stm8s103f3p6-module.jpg)
  
 The same sites also sell dirt cheap programmers for less than € 2,00 but any ST-Link V2 should work.
 
