@@ -40,7 +40,7 @@ void log_result() {
     }
 }
 
-void eoc_isr(void) __interrupt(22) {
+void adc_isr(void) __interrupt(22) {
     if(ADC_CSR & ADC_CSR_EOC) {
         log_result();
         ADC_CSR &= ~ADC_CSR_EOC;
